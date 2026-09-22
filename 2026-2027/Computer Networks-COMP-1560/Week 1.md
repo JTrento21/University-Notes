@@ -194,5 +194,20 @@ The conceptual point is more important than the equation.
 Matched impedance --> Good signal transfer
 Mismatched impedance --> reflections
 
-Guided media
+Guided media - Coaxial Cable
+A coaxial cable contains: 
+
+Central copper conductor --> insulating dielectric --> surrounding conductor/shield
+
+Older Ethernet standards included:
+
+10BASE5: 10 Mb/s, Up to roughly 500 m
+
+10BASE2: 10Mb/s, Up to roughly 185m
+
+These are mainly historically important now, but they demonstrate how physical media constrain Ethernet implementations.
+
+Guided media - Twisted Pair
+Two insulated copper conductors are twisted together.
+Typical insulated
 
