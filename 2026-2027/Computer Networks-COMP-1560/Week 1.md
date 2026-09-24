@@ -1,6 +1,6 @@
 Lecture 1 - Transmission Media
 
-What is transmission media?
+# What is transmission media?
 
 Transmission media is whatever carries data from one device to another.
 
@@ -15,7 +15,7 @@ These are split into 2 main types:
 - Guided media: The signal follows a physical path (twisted pair, coaxial cable, fibre optic)
 - Unguided media: signal travels through space (radio, microwaves, infrared)
 
-What limits communication?
+# What limits communication?
 
 You cannot send unlimited amounts of data through a communication channel. The main limitations are: 
 
@@ -27,7 +27,7 @@ You cannot send unlimited amounts of data through a communication channel. The m
 Mental model:
 Good communication = enough bandwidth + strong enough signal + low enough noise
 
-Shannon's Theorem
+# Shannon's Theorem
 
 Shannon's Theorem describes the theoretical maximum data rate of a noisy communication channel
 
@@ -55,14 +55,14 @@ $$$$
 C=4,000,000 bits/s
 $$So the theoretical channel capacity is 4Mb/s
 
-Transmission impairments
+# Transmission impairments
 
 A signal leaving the transmitter does not necessarily arrive perfectly at receiver.
 
 Basic model:
 Transmitter --> Transmission Medium --> Receiver
 
-Attenuation
+**Attenuation**
 Attenuation is the loss of signal strength over distance. The further a signal travels the weaker it generally becomes.
 
 Examples: 
@@ -71,12 +71,12 @@ Examples:
 - Higher frequencies may experience greater losses
 - Fibre also experiences attenuation
 
-Distortion
+**Distortion**
 Distortion is when the shape of the signal changes while travelling
 
 Signals contain different frequency components, those frequencies may travel or be affected differently by the medium, causing the received by the medium causing the received signal to differ from transmitted signal.
 
-Noise/Interference
+**Noise/Interference**
 Noise is unwanted signals that are added to the intended signals.
 
 Examples:
@@ -84,8 +84,7 @@ Examples:
 - EM interference
 - Crosstalk
 - External interference
-
-Why are Ethernet wires twisted?
+# Why are Ethernet wires twisted?
 Ethernet cables commonly contain twisted pairs of copper wires.
 
 The twisting helps reduce:
@@ -97,7 +96,7 @@ Essentially, the geometry helps unwanted EM effects cancel out rather than consi
 So why are wires twisted in ethernet cables?
 To reduce electromagnetic interference and crosstalk, improving signal integrity.
 
-Electrical properties of transmission media
+# Electrical properties of transmission media
 
 Copper network cables have electrical properties that affect how signals travel. 
 
@@ -113,7 +112,7 @@ Greater resistance means more opposition to current.
 
 The water hose analogy describes Voltage as the Pressure, Current as the size of the hose, Resistance as sand inside the hose.
 
-Ohm's Law
+# Ohm's Law
 A fundamental electrical relationship:
 
 V=IR
@@ -128,7 +127,7 @@ R=V/I
 Resistance + inductance + Capacitance 
 R + L + C
 
-Inductance
+# Inductance
 A changing current creates a changing magnetic field. 
 
 That magnetic field creates an effect that opposes changes in the current therefore Inductance resists rapid changes in current.
@@ -136,7 +135,7 @@ That magnetic field creates an effect that opposes changes in the current theref
 Unit: Henry, H
 Symbol: L 
 
-Capacitance
+# Capacitance
 Capacitance describes the ability to store electric charge
 
 In networking cables, capacitance influences how quickly voltage can change. Too much capacitance can affect high-frequency signals and therefore signal quality.
@@ -145,7 +144,7 @@ Unit: Farad, F
 
 A cable is not just a piece of metal. Its resistance, capacitance and inductance influence how signals behave.
 
-Transmission lines and impedance
+# Transmission lines and impedance
 At networking frequencies, cables behave as transmission lines.
 
 Examples:
@@ -160,7 +159,7 @@ Unit: Ohms, Ω
 
 Impedance is not identical to resistance, resistance is part of the picture but impedance also accounts for effects such as capacitance and inductance.
 
-Impedance matching reflections
+# Impedance matching and reflections
 A signal travelling down a transmission line a load
 
 IF:
@@ -171,7 +170,7 @@ $$The impedances are matched. The signals transfers efficiently into the load. I
 Its almost like an echo:
 Signal travels forward --> impedance changes --> some signals reflects backwards.
 
-Reflection coefficient
+# Reflection coefficient
 The reflection coefficient describes how much of the signal is reflected at an impedance boundary.
 
 $$
@@ -194,7 +193,7 @@ The conceptual point is more important than the equation.
 Matched impedance --> Good signal transfer
 Mismatched impedance --> reflections
 
-Guided media - Coaxial Cable
+# Guided media - Coaxial Cable
 A coaxial cable contains: 
 
 Central copper conductor --> insulating dielectric --> surrounding conductor/shield
@@ -207,7 +206,90 @@ Older Ethernet standards included:
 
 These are mainly historically important now, but they demonstrate how physical media constrain Ethernet implementations.
 
-Guided media - Twisted Pair
+# Guided media - Twisted Pair
 Two insulated copper conductors are twisted together.
-Typical insulated
 
+Typical Ethernet cables: 
+
+- Cat5e - 1 Gb/s - 100m
+- Cat6 - 1 Gb/s - 100m
+- Cat6a - 10 Gb/s - 100m
+- Cat8 - 25/40 Gb/s - ~30 m
+
+# Guided media - Fibre Optic
+Fibre transmits information using light rather than electrical signals
+
+Basic construction:
+Core --> cladding --> protective layer
+
+The light travels through the core.
+
+Advantages include: 
+
+- Very high bandwidth
+- long transmission distances
+- low attenuation 
+- immunity to electromagnetic interference 
+
+Multimode fibre uses a larger core and allows multiple propagation paths  or modes of light, these are generally used for shorter distances, such as within buildings or data centres. 
+
+Examples: 
+
+- OM3 - 10 Gb/s - approx 300m
+- OM4 - 10 Gb/s - approx 400m
+
+Single-mode fibre uses a smaller core and supports one propagation mode, these are suited for longer distances such as 10km with speeds between 10 Gb/s and 100 Gb/s.
+
+# Unguided media
+Unguided signals propagate through space rather than through a cable, some examples being through radio waves, microwaves and infrared light. 
+
+Wi-Fi and cellular networks are examples of unguided communication.
+
+# Electromagnetic spectrum
+Wireless signals are usually electromagnetic waves
+
+The three most important concepts are: 
+
+- frequency
+- wavelength 
+- speed of propagation
+They are related by:
+$$
+c=f\lambda
+$$
+Where
+- c = speed of light
+- f = frequency
+- lambda = wavelength
+Therefore:
+$$
+\lambda=c/f
+$$
+As frequency increases wavelength decreases
+As frequency decreases wavelength increases
+
+# Why frequency matters
+Different frequencies behave differently, lower frequencies generally propagate better over long distances while higher frequencies can offer greater bandwidth but may have more demanding propagation characteristics.
+
+Frequency affects things such as: 
+
+- wavelength
+- antenna size
+- propagation distance
+- penetration through objects 
+- atmospheric interaction
+- available bandwidth
+
+This is why different wireless technologies use different portions of the electromagnetic spectrum.
+
+Putting it all together
+
+You send a WhatsApp message from your phone in London to someone in Australia.
+
+Your message does not travel using one transmission medium.
+
+The actual path may look like this:
+
+- **Phone** --> wireless electromagnetic waves --> **Wi-Fi access point/mobile base station** -->copper cable or fibre --> **ISP network** --> fibre-optic backbone --> **International/submarine fibre links** --> Australian network infrastructure --> **Mobile/Wi-Fi network** --> wireless electromagnetic waves --> **Friends phone**
+
+The actual data remains digital, but the physical representation of that data changes depending on the transmission medium.
